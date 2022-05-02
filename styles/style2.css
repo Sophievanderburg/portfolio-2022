@@ -1,0 +1,158 @@
+:root {
+    --main-bg-color: #323232;
+    --text-color: white;
+    --sec-color1:#BDEFFF;
+    --sec-color2:lightgreen;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------- lettertype dingen --------------- */
+body{
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 ,h4{
+    color: var(--sec-color1);
+    font-family: lust, serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* -------------------- header ---------------------- */
+header{
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vw;
+}
+
+header > a{
+    color: var(--sec-color1);
+    font-family: lust, serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+header nav a{
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    position: relative;
+}
+
+header nav a::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: white;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+header nav a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style-type: none;
+}
+
+header nav ul li{
+    margin-left: 2em;
+}
+
+/* -------------------- main ---------------------- */
+main{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2{
+    font-size: 10vw;
+    line-height: 0.75em;
+}
+
+main > p{
+    margin-top: 3em;
+}
+
+main ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 30vw;
+}
+
+main ul li:first-of-type{
+    margin-right: 2em;
+}
+
+main ul li img{
+    width: 30%;
+    height: auto;
+}
+
+main ul li p{
+    margin: 3em 0 2em 0;
+    text-align: center;
+}
+
+main ul li a{
+    display: inline-block;
+    color: var(--main-bg-color);
+    background-color: var(--sec-color1);
+    border: 1px solid var(--sec-color1);
+    
+    padding: 0.25em 0.75em;
+
+    font-size: 1.25em;
+    font-family: lust, serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    transition: 0.25s;
+}   
+
+main ul li a:hover{
+    color: var(--sec-color1);
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--sec-color1);
+}
