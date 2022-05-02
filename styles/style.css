@@ -1,0 +1,102 @@
+:root {
+    --main-bg-color: #323232;
+    --text-color: white;
+    --sec-color1:#BDEFFF;
+    --sec-color2:lightgreen;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------- lettertype dingen --------------- */
+body{
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 ,h4{
+    color: var(--sec-color1);
+    font-family: lust, serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* -------------------- header ---------------------- */
+header{
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vw;
+}
+
+header > a{
+    color: var(--sec-color1);
+    font-family: lust, serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+header nav a{
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style-type: none;
+}
+
+header nav ul li{
+    margin-left: 2em;
+}
+
+
+/* -------------------- main ---------------------- */
+main{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main section{
+    width: auto; height: auto;
+}
+
+main section h2{
+    font-size: 10vw;
+    line-height: 0.75em;
+}
+
+main section > p{
+    margin: 1em 0;
+    font-size: 1.25em;
+}
+
+main section > a{
+    display: block;
+    width: 50%;
+    color: var(--main-bg-color);
+    background-color: var(--sec-color1);
+    
+    padding: 0.5em 1em;
+
+    font-size: 1.5em;
+    font-family: lust, serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+}
