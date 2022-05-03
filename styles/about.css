@@ -88,18 +88,25 @@ header nav ul li{
 main{
     width: 100vw;
     height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > div{
     display: grid;
     padding: 0 10vw;
     row-gap: 3em;
     grid-template-columns: 1fr;
 }
 
-main h2{
+main > div h2{
+    line-height: 0.85em;
     font-size: max(5em, 7vw);
 }
 
 /* skill */
-main section:nth-of-type(2) ul:first-of-type{
+main > div section:nth-of-type(2) ul:first-of-type{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -107,31 +114,31 @@ main section:nth-of-type(2) ul:first-of-type{
     width: 100%;
 }
 
-main section:nth-of-type(2) ul:first-of-type li{
+main > div section:nth-of-type(2) ul:first-of-type li{
     width: calc(20% - 0.5em);
     max-width: 50px;
     margin-right: 0.5em;
 }
 
-main section:nth-of-type(2) ul:first-of-type li img{
+main > div section:nth-of-type(2) ul:first-of-type li img{
     width: 100%;
 }
 
-main section:nth-of-type(2) ul:nth-of-type(2){
+main > div section:nth-of-type(2) ul:nth-of-type(2){
     margin-top: 2em;
     list-style-type: none;
 }
 
-main section:nth-of-type(2) ul:nth-of-type(2) li{
+main > div section:nth-of-type(2) ul:nth-of-type(2) li{
     margin-top: 1em;
 }
 
 /* experience */
-main section:nth-of-type(3) ul{
+main > div section:nth-of-type(3) ul{
     list-style-type: none;
 }
 
-main section:nth-of-type(3) ul li{
+main > div section:nth-of-type(3) ul li{
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 1fr;
@@ -142,7 +149,7 @@ main section:nth-of-type(3) ul li{
     margin-bottom: 1em;
 }
 
-main section:nth-of-type(3) ul li p:first-of-type{
+main > div section:nth-of-type(3) ul li p:first-of-type{
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
 
@@ -153,31 +160,31 @@ main section:nth-of-type(3) ul li p:first-of-type{
     font-size: 1.3em;
 }
 
-main section:nth-of-type(3) ul li p:nth-of-type(2){
+main > div section:nth-of-type(3) ul li p:nth-of-type(2){
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
 }
 
-main section:nth-of-type(3) ul li p:nth-of-type(3){
+main > div section:nth-of-type(3) ul li p:nth-of-type(3){
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
 }
 
 
 @media (min-width: 900px) { 
-    main{
+    main > div{
         column-gap: 6em;
         row-gap: 4em;
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: inherit;
     }
 
-    main h2{
+    main > div h2{
         grid-column: 1 / span 1;
     }
 
     /* about */
-    main section:first-of-type{
+    main > div section:first-of-type{
     grid-column: 2 / span 2;
     grid-row: 1 / span 1;
     }
