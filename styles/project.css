@@ -15,6 +15,10 @@ header, main, footer{
     max-width: 2000px;
 }
 
+h4{
+    font-size: 1.2em;
+}
+
 /* --------------- lettertype dingen --------------- */
 body{
     font-family: montserrat, sans-serif;
@@ -23,7 +27,7 @@ body{
     color: var(--text-color);
 }
 
-h1, h2, h3 ,h4{
+h1, h2, h3 ,h4, h5{
     color: var(--sec-color1);
     font-family: lust, serif;
     font-weight: 700;
@@ -92,6 +96,7 @@ header nav ul li{
 main{
     width: 100vw;
     height: 90vh;
+    padding: 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +134,78 @@ main > div ul li{
     margin-bottom: 1em;
 }
 
+section p + p{
+    margin-top: 1em;
+}
+
+.project2{
+    width: 100%;
+}
+
+.project2 > section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.project2 > section > div{
+    width: 50%;
+    min-width: 400px;
+}
+
+.project2  section video{
+    height: 65vh;
+}
+
+p a{
+    color: var(--sec-color1);
+}
+
+.project2 > h4{
+    font-size: 1.5em;
+    margin: 3em 0 0.75em 0;
+}
+
+.project2 > h5{
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+
+.project2 > img {
+    width: 90%;
+    max-width: 800px;
+}
+
+.project2 > ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project2 > ul li{
+    width: 30%;
+    margin-right: 3%;
+    min-width: 200px;
+}
+
+.project2 > ul li img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
 @media (min-width: 900px) { 
+    main{
+        padding: 0;
+    }
+
     main > div{
         max-width: 90vw;
         column-gap: 6em;

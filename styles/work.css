@@ -162,6 +162,8 @@ main > div > ul > li ul{
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0.5em 0;
+    max-height: 55%;
+    overflow: scroll;
 }
 
 main > div > ul > li ul li{
@@ -169,10 +171,6 @@ main > div > ul > li ul li{
     border: 1px solid var(--sec-color1);
     margin: 0 0.5em 0.5em 0;
     padding: 0.5em;
-}
-
-main > div > ul > li ul li:first-of-type{
-    /* margin: 0; */
 }
 
 main > div ul li div a{
