@@ -146,12 +146,13 @@ main > div > ul > li{
 main > div > ul > li img{
     height: 30vh;
     width: 100%;
+    object-fit: cover;
 }
 
 main > div > ul > li div{
     height: 30vh;
     padding: 2em;
-    border-top: 1pxsolid red;
+    border-top: 1px solid var(--sec-color1);
 }
 
 /* tags */
@@ -166,12 +167,12 @@ main > div > ul > li ul{
 main > div > ul > li ul li{
     color: var(--sec-color1);
     border: 1px solid var(--sec-color1);
-    margin-left: 0.5em;
+    margin: 0 0.5em 0.5em 0;
     padding: 0.5em;
 }
 
 main > div > ul > li ul li:first-of-type{
-    margin: 0;
+    /* margin: 0; */
 }
 
 main > div ul li div a{
