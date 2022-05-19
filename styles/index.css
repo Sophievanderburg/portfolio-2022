@@ -98,9 +98,38 @@ main{
     align-items: center;
 }
 
+main > div{
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    animation: move-in 1s forwards;
+}
+
+@keyframes move-in{
+    0%{
+        transform: translateY(10em);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+main > div > section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
 main section h2{
     font-size: 10vw;
     line-height: 0.75em;
+    transition: 0.5s;
 }
 
 main section h2 span{
@@ -111,27 +140,27 @@ main section h2 span{
 }
 
 main section h2 span:first-of-type{
-    animation: hello 1s 1;
+    animation: hello 1s 1 1s;
 }
 
 main section h2 span:nth-of-type(2){
-    animation: hello 1s 1 0.125s;
+    animation: hello 1s 1 1.125s;
 }
 
 main section h2 span:nth-of-type(3){
-    animation: hello 1s 1 0.25s;
+    animation: hello 1s 1 1.25s;
 }
 
 main section h2 span:nth-of-type(4){
-    animation: hello 1s 1 0.375s;
+    animation: hello 1s 1 1.375s;
 }
 
 main section h2 span:nth-of-type(5){
-    animation: hello 1s 1 0.5s;
+    animation: hello 1s 1 1.5s;
 }
 
 main section h2 span:nth-of-type(6){
-    animation: hello 1s 1 0.625s;
+    animation: hello 1s 1 1.625s;
 }
 
 @keyframes hello{
@@ -149,10 +178,11 @@ main section h2 span:nth-of-type(6){
 main section > p{
     margin: 1em 0;
     font-size: 1.25em;
+    max-width: 650px;
 }
 
-main section > a{
-    display: inline-block;
+main > div section > a{
+    display: block;
     color: var(--main-bg-color);
     background-color: var(--sec-color1);
     border: 1px solid var(--sec-color1);
