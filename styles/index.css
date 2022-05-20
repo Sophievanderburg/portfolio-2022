@@ -96,6 +96,8 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    position: relative;
 }
 
 main > div{
@@ -125,54 +127,39 @@ main > div > section{
     align-items: flex-start;
 }
 
-
 main section h2{
+    width: 0;
     font-size: 10vw;
-    line-height: 0.75em;
+    line-height: 1em;
     transition: 0.5s;
+
+    overflow: hidden; 
+    border-right: 15px solid var(--sec-color1);
 }
 
-main section h2 span{
-    display: inline-block;
-    transform: scale(1);
-    transform-origin: bottom center;
-    transition: 0.5s;
+/* The typing effect */
+@keyframes typing {
+    from, to { width: 0 }
+    50% { width: 100% }
+}
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--sec-color1)}
 }
 
-main section h2 span:first-of-type{
-    animation: hello 1s 1 1s;
-}
+main button{
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 0.25em;
 
-main section h2 span:nth-of-type(2){
-    animation: hello 1s 1 1.125s;
-}
-
-main section h2 span:nth-of-type(3){
-    animation: hello 1s 1 1.25s;
-}
-
-main section h2 span:nth-of-type(4){
-    animation: hello 1s 1 1.375s;
-}
-
-main section h2 span:nth-of-type(5){
-    animation: hello 1s 1 1.5s;
-}
-
-main section h2 span:nth-of-type(6){
-    animation: hello 1s 1 1.625s;
-}
-
-@keyframes hello{
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.5);
-    }
-    100%{
-        transform: scale(1);
-    }
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
 }
 
 main section > p{
