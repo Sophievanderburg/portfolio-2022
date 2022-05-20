@@ -124,7 +124,22 @@ main > div > section{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+main > div > section > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
+}
+
+main > div > section > img{
+    width: auto;
+    height: 40vh;
+    border-radius: 50%;
+    border: 5px solid var(--sec-color1);
 }
 
 main section h2{
@@ -162,13 +177,13 @@ main button{
     left: 1em;
 }
 
-main section > p{
+main section div > p{
     margin: 1em 0;
     font-size: 1.25em;
     max-width: 650px;
 }
 
-main > div section > a{
+main > div section div > a{
     display: block;
     color: var(--main-bg-color);
     background-color: var(--sec-color1);
@@ -184,8 +199,19 @@ main > div section > a{
     transition: 0.25s;
 }   
 
-main section > a:hover{
+main section div > a:hover{
     color: var(--sec-color1);
     background-color: var(--main-bg-color);
     border: 1px solid var(--sec-color1);
+}
+
+@media (min-width: 900px) {
+    main > div > section{
+        flex-direction: row;
+        padding: 0;
+    }
+
+    main > div > section > img{
+        margin-right: 3em;
+    }
 }
