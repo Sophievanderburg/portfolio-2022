@@ -1,4 +1,4 @@
-talen = ["Hello.", "Hallo.", "Bonjour.", "Hola.", "Hallå."]
+talen = ["Hello.", "Hallo.", "Bonjour.", "Hola.", "Hallå.","Ciao.", "Hej.", "Óla.", "Privet."]
 
 const text =  document.querySelector('main div section h2')
 const button = document.querySelector('main > button')
@@ -6,16 +6,12 @@ const button = document.querySelector('main > button')
 let number = 0
 
 let amount = text.innerText.length
-console.log(amount)
 
 function animationOn(){
-  console.log('aan')
-  console.log(amount)
   text.style.setProperty('animation', 'typing 2s steps( ' + amount + ', end) forwards, blink-caret 1s step-end infinite')
 }
 
 function animationOff(){
-   console.log('uit')
   text.style.setProperty('animation', '')
 }
 
@@ -41,7 +37,6 @@ let interval1 = setInterval(animationOff, 3000)
 let interval2 = setInterval(changeText, 3000)
 
 button.addEventListener('click', ()=>{
-  console.log('click')
   clearInterval(interval1)
   clearInterval(interval2)
   

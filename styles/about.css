@@ -113,7 +113,7 @@ main > div{
     min-height: 50vh;
     display: grid;
     padding: 0 10vw;
-    row-gap: 3em;
+    row-gap: 2em;
     grid-template-columns: 1fr;
 
     animation: move-in 1s forwards;
@@ -136,7 +136,7 @@ main > div h2{
 }
 
 p + h3{
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 /* skill */
@@ -208,7 +208,7 @@ main > div section:nth-of-type(3) ul li p:nth-of-type(3){
 @media (min-width: 900px) { 
     main > div{
         column-gap: 6em;
-        row-gap: 4em;
+        row-gap: 3em;
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: inherit;
     }
@@ -234,6 +234,11 @@ main > div section:nth-of-type(3) ul li p:nth-of-type(3){
     main section:nth-of-type(3){
     grid-column: 2 / span 2;
     grid-row: 2 / span 2;
+    }
+
+    main section:nth-of-type(3) ul{
+        max-height: 33vh;
+        overflow: scroll;
     }
 
     main section:nth-of-type(3) ul li{
