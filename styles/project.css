@@ -138,6 +138,10 @@ section p + p{
     margin-top: 1em;
 }
 
+section{
+ padding-bottom: 4em;
+}
+
 .project2{
     width: 100%;
 }
@@ -196,8 +200,18 @@ p a{
 
 
 
+p.assignment {
+    border-left: 5px solid var(--sec-color1);
+    padding-left: 1em;
+}
 
 
+.project4 video{
+    width: 100%;
+    max-width: 800px;
+
+    margin: 1em 0;
+}
 
 
 
