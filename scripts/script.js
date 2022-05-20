@@ -1,4 +1,4 @@
-talen = ["Hello.", "Hallo.", "Bonjour.", "Hola.", "Hallå.","Ciao.", "Hej.", "Óla.", "Privet."]
+talen = ["Hello.", "Hallo.", "Hola.", "Hallå.","Ciao.", "Hej.", "Óla.", "Privet."]
 
 const text =  document.querySelector('main div section h2')
 const button = document.querySelector('main > button')
